@@ -13,11 +13,13 @@ public partial class MainPage : ContentPage
 		int g = (int)SliderG.Value;
 		int b = (int)SliderB.Value;
 
-		LabelRGB.Text = $"({r}, {g}, {b})";
+		LabelRValue.Text = r.ToString();
+		LabelGValue.Text = g.ToString();
+		LabelBValue.Text = b.ToString();
 		this.BackgroundColor = Color.FromRgb(r, g, b);
 
 		string hex = $"#{r:X2}{g:X2}{b:X2}";
-		LabelHex.Text = hex;
+		LabelHex.Text = "Copiar HEX: " + hex;
 	}
 
 	private async void OnHexLabelTapped(object sender, EventArgs e)
